@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+
+<language
+    name="Ogre"
+    version="1.0"
+    kateversion="3.4"
+    section="Other"
+    extensions="*.compositor;*.material;*.program"
+    style="Ogre"
+    mimetype="text/x-ogre"
+    author="Marc Schweitzer (marc(dot)schweitzer(at)ircad(dot)fr)"
+    license="LGPL v3"
+>
+<highlighting>
+    <list name="keywords1">
+        <item>compositor</item>
+        <item>target</item>
+        <item>target_output</item>
+        <item>compositor_logic</item>
+        <item>scheme</item>
+        <item>vertex_program</item>
+        <item>geometry_program</item>
+        <item>fragment_program</item>
+        <item>default_params</item>
+        <item>material</item>
+        <item>technique</item>
+        <item>pass</item>
+        <item>texture_unit</item>
+        <item>vertex_program_ref</item>
+        <item>geometry_program_ref</item>
+        <item>fragment_program_ref</item>
+        <item>shadow_caster_vertex_program_ref</item>
+        <item>shadow_receiver_fragment_program_ref</item>
+        <item>shadow_receiver_vertex_program_ref </item>
+        <item>abstract</item>
+        <item>import</item>
+        <item>cg</item>
+        <item>from</item>
+        <item>hlsl</item>
+        <item>glsl</item>
+    </list>
+
+      <list name="keywords2">
+          <item>input</item>
+          <item>texture</item>
+          <item>render_quad</item>
+          <item>source</item>
+          <item>syntax</item>
+          <item>manual_named_constants</item>
+          <item>entry_point</item>
+          <item>profiles</item>
+          <item>includes_skeletal_animation</item>
+          <item>includes_morph_animation</item>
+          <item>includes_pose_animation</item>
+          <item>uses_vertex_texture_fetch</item>
+          <item>uses_adjacency_information</item>
+          <item>target</item>
+          <item>preprocessor_defines</item>
+          <item>column_major_matrices</item>
+          <item>attach</item>
+          <item>input_operation_type</item>
+          <item>output_operation_type</item>
+          <item>max_output_vertices</item>
+          <item>delegate</item>
+          <item>param_indexed</item>
+          <item>param_indexed_auto</item>
+          <item>param_named</item>
+          <item>param_named_auto</item>
+          <item>lod_distances</item>
+          <item>receive_shadows</item>
+          <item>transparency_casts_shadows</item>
+          <item>set</item>
+          <item>set_texture_alias</item>
+          <item>scheme</item>
+          <item>lod_index</item>
+          <item>shadow_caster_material</item>
+          <item>shadow_receiver_material</item>
+          <item>gpu_vendor_rule</item>
+          <item>gpu_device_rule</item>
+          <item>ambient</item>
+          <item>diffuse</item>
+          <item>specular</item>
+          <item>emissive</item>
+          <item>scene_blend</item>
+          <item>separate_scene_blend</item>
+          <item>depth_check</item>
+          <item>depth_write</item>
+          <item>depth_func</item>
+          <item>depth_bias</item>
+          <item>iteration_depth_bias</item>
+          <item>alpha_rejection</item>
+          <item>alpha_to_coverage</item>
+          <item>light_scissor</item>
+          <item>light_clip_planes</item>
+          <item>illumination_stage</item>
+          <item>transparent_sorting</item>
+          <item>normalise_normals</item>
+          <item>cull_hardware</item>
+          <item>cull_software</item>
+          <item>lighting</item>
+          <item>shading</item>
+          <item>polygon_mode</item>
+          <item>polygon_mode_overrideable</item>
+          <item>fog_override</item>
+          <item>colour_write</item>
+          <item>max_lights</item>
+          <item>start_light</item>
+          <item>iteration</item>
+          <item>point_size</item>
+          <item>point_sprites</item>
+          <item>point_size_attenuation</item>
+          <item>point_size_min</item>
+          <item>point_size_max</item>
+          <item>texture_alias</item>
+          <item>texture</item>
+          <item>anim_texture</item>
+          <item>cubic_texture</item>
+          <item>tex_coord_set</item>
+          <item>tex_address_mode</item>
+          <item>tex_border_colour</item>
+          <item>filtering</item>
+          <item>max_anisotropy</item>
+          <item>mipmap_bias</item>
+          <item>colour_op</item>
+          <item>colour_op_ex</item>
+          <item>colour_op_multipass_fallback</item>
+          <item>alpha_op_ex</item>
+          <item>env_map</item>
+          <item>scroll</item>
+          <item>scroll_anim</item>
+          <item>rotate</item>
+          <item>rotate_anim</item>
+          <item>scale</item>
+          <item>wave_xform</item>
+          <item>transform</item>
+          <item>binding_type</item>
+          <item>content_type</item>
+      </list>
+
+    <list name="types">
+        <item>PF_A8R8G8B8</item>
+        <item>PF_R8G8B8A8</item>
+        <item>PF_R8G8B8</item>
+        <item>PF_FLOAT16_RGBA</item>
+        <item>PF_FLOAT16_RGB</item>
+        <item>PF_FLOAT16_R</item>
+        <item>PF_FLOAT32_RGBA</item>
+        <item>PF_FLOAT32_RGB</item>
+        <item>local_scope</item>
+        <item>chain_scope</item>
+        <item>global_scope</item>
+        <item>PF_FLOAT32_R</item>
+        <item>int</item>
+        <item>half</item>
+        <item>float</item>
+        <item>float2</item>
+        <item>float3</item>
+        <item>float4</item>
+        <item>float3x3</item>
+        <item>float3x4</item>
+        <item>float4x3</item>
+        <item>float4x4</item>
+        <item>double</item>
+        <item>include</item>
+        <item>exclude</item>
+        <item>true</item>
+        <item>false</item>
+        <item>on</item>
+        <item>off</item>
+        <item>none</item>
+        <item>vertexcolour</item>
+        <item>add</item>
+        <item>modulate</item>
+        <item>alpha_blend</item>
+        <item>colour_blend</item>
+        <item>one</item>
+        <item>zero</item>
+        <item>dest_colour</item>
+        <item>src_colour</item>
+        <item>one_minus_dest_colour</item>
+        <item>one_minus_src_colour</item>
+        <item>dest_alpha</item>
+        <item>src_alpha</item>
+        <item>one_minus_dest_alpha</item>
+        <item>one_minus_src_alpha</item>
+        <item>always_fail</item>
+        <item>always_pass</item>
+        <item>less</item>
+        <item>less_equal</item>
+        <item>equal</item>
+        <item>not_equal</item>
+        <item>greater_equal</item>
+        <item>greater</item>
+        <item>clockwise</item>
+        <item>anticlockwise</item>
+        <item>back</item>
+        <item>front</item>
+        <item>flat</item>
+        <item>gouraud</item>
+        <item>phong</item>
+        <item>solid</item>
+        <item>wireframe</item>
+        <item>points</item>
+        <item>type</item>
+        <item>linear</item>
+        <item>exp</item>
+        <item>exp2</item>
+        <item>colour</item>
+        <item>density</item>
+        <item>start</item>
+        <item>end</item>
+        <item>once</item>
+        <item>once_per_light</item>
+        <item>per_light</item>
+        <item>per_n_lights</item>
+        <item>point</item>
+        <item>directional</item>
+        <item>spot</item>
+        <item>1d</item>
+        <item>2d</item>
+        <item>3d</item>
+        <item>cubic</item>
+        <item>PF_L8</item>
+        <item>PF_L16</item>
+        <item>PF_A8</item>
+        <item>PF_A4L4</item>
+        <item>PF_BYTE_LA</item>
+        <item>PF_R5G6B5</item>
+        <item>PF_B5G6R5</item>
+        <item>PF_R3G3B2</item>
+        <item>PF_A4R4G4B4</item>
+        <item>PF_A1R5G5B5</item>
+        <item>PF_R8G8B8</item>
+        <item>PF_B8G8R8</item>
+        <item>PF_A8R8G8B8</item>
+        <item>PF_A8B8G8R8</item>
+        <item>PF_B8G8R8A8</item>
+        <item>PF_R8G8B8A8</item>
+        <item>PF_X8R8G8B8</item>
+        <item>PF_X8B8G8R8</item>
+        <item>PF_A2R10G10B10</item>
+        <item>PF_A2B10G10R10</item>
+        <item>PF_FLOAT16_R</item>
+        <item>PF_FLOAT16_RGB</item>
+        <item>PF_FLOAT16_RGBA</item>
+        <item>PF_FLOAT32_R</item>
+        <item>PF_FLOAT32_RGB</item>
+        <item>PF_FLOAT32_RGBA</item>
+        <item>PF_SHORT_RGBA</item>
+        <item>combinedUVW</item>
+        <item>separateUV</item>
+        <item>vertex</item>
+        <item>fragment</item>
+        <item>named</item>
+        <item>shadow</item>
+        <item>wrap</item>
+        <item>clamp</item>
+        <item>mirror</item>
+        <item>border</item>
+        <item>bilinear</item>
+        <item>trilinear</item>
+        <item>anisotropic</item>
+        <item>replace</item>
+        <item>source1</item>
+        <item>source2</item>
+        <item>modulate_x2</item>
+        <item>modulate_x4</item>
+        <item>add_signed</item>
+        <item>add_smooth</item>
+        <item>subtract</item>
+        <item>blend_diffuse_alpha</item>
+        <item>blend_texture_alpha</item>
+        <item>blend_current_alpha</item>
+        <item>blend_manual</item>
+        <item>dotproduct</item>
+        <item>blend_diffuse_colour</item>
+        <item>src_current</item>
+        <item>src_texture</item>
+        <item>src_diffuse</item>
+        <item>src_specular</item>
+        <item>src_manual</item>
+        <item>spherical</item>
+        <item>planar</item>
+        <item>cubic_reflection</item>
+        <item>cubic_normal</item>
+        <item>xform_type</item>
+        <item>scroll_x</item>
+        <item>scroll_y</item>
+        <item>scale_x</item>
+        <item>scale_y</item>
+        <item>wave_type</item>
+        <item>sine</item>
+        <item>triangle</item>
+        <item>square</item>
+        <item>sawtooth</item>
+        <item>inverse_sawtooth</item>
+        <item>base</item>
+        <item>frequency</item>
+        <item>phase</item>
+        <item>amplitude</item>
+        <item>arbfp1</item>
+        <item>arbvp1</item>
+        <item>glslv</item>
+        <item>glslf</item>
+        <item>gp4vp</item>
+        <item>gp4gp</item>
+        <item>gp4fp</item>
+        <item>fp20</item>
+        <item>fp30</item>
+        <item>fp40</item>
+        <item>vp20</item>
+        <item>vp30</item>
+        <item>vp40</item>
+        <item>ps_1_1</item>
+        <item>ps_1_2</item>
+        <item>ps_1_3</item>
+        <item>ps_1_4</item>
+        <item>ps_2_0</item>
+        <item>ps_2_a</item>
+        <item>ps_2_b</item>
+        <item>ps_2_x</item>
+        <item>ps_3_0</item>
+        <item>ps_3_x</item>
+        <item>vs_1_1</item>
+        <item>vs_2_0</item>
+        <item>vs_2_a</item>
+        <item>vs_2_x</item>
+        <item>vs_3_0</item>
+        <item>1d</item>
+        <item>2d</item>
+        <item>3d</item>
+        <item>4d</item>
+    </list>
+
+    <list name="general_variables">
+        <item>gamma</item>
+        <item>pooled</item>
+        <item>no_fsaa</item>
+        <item>depth_pool</item>
+        <item>scope</item>
+        <item>target_width</item>
+        <item>target_height</item>
+        <item>target_width_scaled</item>
+        <item>target_height</item>
+        <item>scaled</item>
+        <item>previous</item>
+        <item>world_matrix</item>
+        <item>inverse_world_matrix</item>
+        <item>transpose_world_matrix</item>
+        <item>inverse_transpose_world_matrix</item>
+        <item>world_matrix_array_3x4</item>
+        <item>view_matrix</item>
+        <item>inverse_view_matrix</item>
+        <item>transpose_view_matrix</item>
+        <item>inverse_transpose_view_matrix</item>
+        <item>projection_matrix</item>
+        <item>inverse_projection_matrix</item>
+        <item>transpose_projection_matrix</item>
+        <item>inverse_transpose_projection_matrix</item>
+        <item>worldview_matrix</item>
+        <item>inverse_worldview_matrix</item>
+        <item>transpose_worldview_matrix</item>
+        <item>inverse_transpose_worldview_matrix</item>
+        <item>viewproj_matrix</item>
+        <item>inverse_viewproj_matrix</item>
+        <item>transpose_viewproj_matrix</item>
+        <item>inverse_transpose_viewproj_matrix</item>
+        <item>worldviewproj_matrix</item>
+        <item>inverse_worldviewproj_matrix</item>
+        <item>transpose_worldviewproj_matrix</item>
+        <item>inverse_transpose_worldviewproj_matrix</item>
+        <item>texture_matrix</item>
+        <item>render_target_flipping</item>
+        <item>light_diffuse_colour</item>
+        <item>light_specular_colour</item>
+        <item>light_attenuation</item>
+        <item>spotlight_params</item>
+        <item>light_position</item>
+        <item>light_direction</item>
+        <item>light_position_object_space</item>
+        <item>light_direction_object_space</item>
+        <item>light_distance_object_space</item>
+        <item>light_position_view_space</item>
+        <item>light_direction_view_space</item>
+        <item>light_power</item>
+        <item>light_diffuse_colour_power_scaled</item>
+        <item>light_specular_colour_power_scaled</item>
+        <item>light_number</item>
+        <item>light_diffuse_colour_array</item>
+        <item>light_specular_colour_array</item>
+        <item>light_diffuse_colour_power_scaled_array</item>
+        <item>light_specular_colour_power_scaled_array</item>
+        <item>light_attenuation_array</item>
+        <item>spotlight_params_array</item>
+        <item>light_position_array</item>
+        <item>light_direction_array</item>
+        <item>light_position_object_space_array</item>
+        <item>light_direction_object_space_array</item>
+        <item>light_distance_object_space_array</item>
+        <item>light_position_view_space_array</item>
+        <item>light_direction_view_space_array</item>
+        <item>light_power_array</item>
+        <item>light_count</item>
+        <item>light_casts_shadows</item>
+        <item>ambient_light_colour</item>
+        <item>surface_ambient_colour</item>
+        <item>surface_diffuse_colour</item>
+        <item>surface_specular_colour</item>
+        <item>surface_emissive_colour</item>
+        <item>surface_shininess</item>
+        <item>derived_ambient_light_colour</item>
+        <item>derived_scene_colour</item>
+        <item>derived_light_diffuse_colour</item>
+        <item>derived_light_specular_colour</item>
+        <item>derived_light_diffuse_colour_array</item>
+        <item>derived_light_specular_colour_array</item>
+        <item>fog_colour</item>
+        <item>fog_params</item>
+        <item>camera_position</item>
+        <item>camera_position_object_space</item>
+        <item>lod_camera_position</item>
+        <item>lod_camera_position_object_space</item>
+        <item>time_0_x</item>
+        <item>costime_0_x</item>
+        <item>sintime_0_x</item>
+        <item>tantime_0_x</item>
+        <item>time_0_x_packed</item>
+        <item>time_0_1</item>
+        <item>costime_0_1</item>
+        <item>sintime_0_1</item>
+        <item>tantime_0_1</item>
+        <item>time_0_1_packed</item>
+        <item>time_0_2pi</item>
+        <item>costime_0_2pi</item>
+        <item>sintime_0_2pi</item>
+        <item>tantime_0_2pi</item>
+        <item>time_0_2pi_packed</item>
+        <item>frame_time</item>
+        <item>fps</item>
+        <item>viewport_width</item>
+        <item>viewport_height</item>
+        <item>inverse_viewport_width</item>
+        <item>inverse_viewport_height</item>
+        <item>viewport_size</item>
+        <item>texel_offsets</item>
+        <item>view_direction</item>
+        <item>view_side_vector</item>
+        <item>view_up_vector</item>
+        <item>fov</item>
+        <item>near_clip_distance</item>
+        <item>far_clip_distance</item>
+        <item>texture_viewproj_matrix</item>
+        <item>texture_viewproj_matrix_array</item>
+        <item>texture_worldviewproj_matrix</item>
+        <item>texture_worldviewproj_matrix_array</item>
+        <item>spotlight_viewproj_matrix</item>
+        <item>spotlight_worldviewproj_matrix</item>
+        <item>scene_depth_range</item>
+        <item>shadow_scene_depth_range</item>
+        <item>shadow_colour</item>
+        <item>shadow_extrusion_distance</item>
+        <item>texture_size</item>
+        <item>inverse_texture_size</item>
+        <item>packed_texture_size</item>
+        <item>pass_number</item>
+        <item>pass_iteration_number</item>
+        <item>animation_parametric</item>
+        <item>custom</item>
+    </list>
+
+    <list name="attention">
+            <item>FIXME</item>
+            <item>TODO</item>
+            <item>BUG</item>
+    </list>
+
+    <contexts>
+        <context attribute="Normal Text" lineEndContext="#stay" name="Normal">
+            <keyword attribute="Keyword1" String="keywords1" context="#stay" />
+            <keyword attribute="Keyword2" String="keywords2" context="#stay" />
+            <keyword attribute="Data Type" String="types" context="#stay" />
+            <keyword attribute="General Variables" String="general_variables" context="#stay" />
+
+            <Float attribute="Float" context="#stay" />
+            <HlCOct attribute="Octal" context="#stay"/>
+            <HlCHex attribute="Hex" context="#stay"/>
+            <Int attribute="Decimal" context="#stay" />
+
+            <Detect2Chars attribute="Comment" context="Commentar 1" char="/" char1="/"/>
+            <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment"/>
+            <DetectChar attribute="Symbol" context="#stay" char="{" beginRegion="Brace1" />
+            <DetectChar attribute="Symbol" context="#stay" char="}" endRegion="Brace1" />
+
+            <DetectChar attribute="Preprocessor" context="Preprocessor" char="#" firstNonSpace="true"/>
+            <RegExpr attribute="Function" context="#stay" String="\b[_\w][_\w\d]*(?=[\s]*[(])" />
+
+            <RegExpr attribute="Symbol" context="Member" String="[.]{1,1}" />
+            <AnyChar attribute="Symbol" context="#stay" String=".+-/*%&lt;&gt;[]()^|&amp;~=!:;,?&#59;" />
+        </context>
+
+        <context name="Member" attribute="Normal Text" lineEndContext="#pop" fallthrough="true" fallthroughContext="#pop">
+            <RegExpr attribute="Function" context="#pop" String="\b[_\w][_\w\d]*(?=[\s]*)" />
+        </context>
+
+        <context name="Commentar 1" attribute="Comment" lineEndContext="#pop">
+            <keyword attribute="Alert" context="#stay" String="attention" />
+        </context>
+
+        <context name="Commentar 2" attribute="Comment" lineEndContext="#stay">
+            <Detect2Chars attribute="Comment" context="#pop" char="*" char1="/" endRegion="Comment"/>
+            <keyword attribute="Alert" context="#stay" String="attention" />
+        </context>
+
+        <context name="Preprocessor" attribute="Preprocessor" lineEndContext="#pop">
+        </context>
+
+    </contexts>
+    <itemDatas>
+        <itemData name="Normal Text"    defStyleNum="dsNormal"/>
+        <itemData name="Keyword1"        defStyleNum="dsKeyword" bold="1"/>
+        <itemData name="Keyword2"        defStyleNum="dsKeyword" />
+        <itemData name="Function"       defStyleNum="dsFunction" bold="0"/>
+        <itemData name="Data Type"      defStyleNum="dsDataType"/>
+        <itemData name="Type Qualifier" defStyleNum="dsDataType"/>
+        <itemData name="Decimal"        defStyleNum="dsDecVal"/>
+        <itemData name="Octal"          defStyleNum="dsBaseN"/>
+        <itemData name="Hex"            defStyleNum="dsBaseN"/>
+        <itemData name="Float"          defStyleNum="dsFloat"/>
+        <itemData name="Symbol"         defStyleNum="dsNormal"/>
+        <itemData name="Preprocessor"   defStyleNum="dsPreprocessor"/>
+        <itemData name="Comment"        defStyleNum="dsComment"/>
+        <itemData name="Alert"          defStyleNum="dsAlert" />
+   </itemDatas>
+
+</highlighting>
+<general>
+    <comments>
+        <comment name="singleLine" start="//" />
+        <comment name="multiLine" start="/*" end="*/" />
+    </comments>
+    <keywords casesensitive="1" />
+</general>
+</language>
