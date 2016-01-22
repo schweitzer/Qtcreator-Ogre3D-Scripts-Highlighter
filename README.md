@@ -12,3 +12,7 @@ C:\Users\USERNAME\AppData\Roaming\QtProject\qtcreator\generic-highlighter
 ### Linux
 
 /home/USERNAME/.config/QtProject/qtcreator/generic-highlighter
+
+### MAC OSX
+
+Users/USERNAME/.config/QtProject/qtcreator/generic-highlighter
