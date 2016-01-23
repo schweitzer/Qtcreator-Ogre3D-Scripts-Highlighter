@@ -1,18 +1,18 @@
 # Qtcreator-Ogre3D-Scripts-Highlighter
-Highlighter for Ogre3D scripts (*.program, *.compositor, *.material) in QtCreator.
+To Highlight Ogre3D Scripts (*.compositor, *.material and *.program) in QtCreator.
 
-## How to use it
+## How to install the Highlighter
 
 Copy the Ogre3D-Scripts.xml in the 'generic-highlighter' folder of QtCreator
 
-### Windows
+* **On Windows**
 
-C:\Users\USERNAME\AppData\Roaming\QtProject\qtcreator\generic-highlighter
+_%LOCALAPPDATA%\QtProject\qtcreator\generic-highlighter_
 
-### Linux
+* **On Linux**
 
-/home/USERNAME/.config/QtProject/qtcreator/generic-highlighter
+_/home/USERNAME/.config/QtProject/qtcreator/generic-highlighter_
 
-### MAC OSX
+* **On Mac OSX**
 
-Users/USERNAME/.config/QtProject/qtcreator/generic-highlighter
+_Users/USERNAME/.config/QtProject/qtcreator/generic-highlighter_
