@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE language SYSTEM "language.dtd">
-
+<!DOCTYPE language SYSTEM "language.dtd"
+[
+    <!ENTITY varname  "[A-Za-z_][A-Za-z0-9_]*">
+]>
 <language
     name="Ogre"
     version="1.0"
@@ -83,6 +85,7 @@
           <item>specular</item>
           <item>emissive</item>
           <item>scene_blend</item>
+          <item>scene_blend_op</item>
           <item>separate_scene_blend</item>
           <item>depth_check</item>
           <item>depth_write</item>
@@ -481,33 +484,28 @@
             <keyword attribute="Keyword2" String="keywords2" context="#stay" />
             <keyword attribute="Data Type" String="types" context="#stay" />
             <keyword attribute="General Variables" String="general_variables" context="#stay" />
+            <RegExpr attribute="User Variable" context="#stay" String="[A-Za-z_][A-Za-z0-9_]*" />
 
-            <Float attribute="Float" context="#stay" />
-            <HlCOct attribute="Octal" context="#stay"/>
-            <HlCHex attribute="Hex" context="#stay"/>
-            <Int attribute="Decimal" context="#stay" />
+            <Float  attribute="Float"   context="#stay" />
+            <HlCOct attribute="Octal"   context="#stay" />
+            <HlCHex attribute="Hex"     context="#stay" />
+            <Int    attribute="Decimal" context="#stay" />
 
-            <Detect2Chars attribute="Comment" context="Commentar 1" char="/" char1="/"/>
-            <Detect2Chars attribute="Comment" context="Commentar 2" char="/" char1="*" beginRegion="Comment"/>
-            <DetectChar attribute="Symbol" context="#stay" char="{" beginRegion="Brace1" />
-            <DetectChar attribute="Symbol" context="#stay" char="}" endRegion="Brace1" />
+            <Detect2Chars attribute="Comment" context="Comment 1" char="/" char1="/"/>
+            <Detect2Chars attribute="Comment" context="Comment 2" char="/" char1="*" beginRegion="Comment"/>
+            <DetectChar   attribute="Symbol" context="#stay" char="{" beginRegion="Brace1" />
+            <DetectChar   attribute="Symbol" context="#stay" char="}" endRegion="Brace1" />
 
             <DetectChar attribute="Preprocessor" context="Preprocessor" char="#" firstNonSpace="true"/>
-            <RegExpr attribute="Function" context="#stay" String="\b[_\w][_\w\d]*(?=[\s]*[(])" />
 
-            <RegExpr attribute="Symbol" context="Member" String="[.]{1,1}" />
             <AnyChar attribute="Symbol" context="#stay" String=".+-/*%&lt;&gt;[]()^|&amp;~=!:;,?&#59;" />
         </context>
 
-        <context name="Member" attribute="Normal Text" lineEndContext="#pop" fallthrough="true" fallthroughContext="#pop">
-            <RegExpr attribute="Function" context="#pop" String="\b[_\w][_\w\d]*(?=[\s]*)" />
-        </context>
-
-        <context name="Commentar 1" attribute="Comment" lineEndContext="#pop">
+        <context name="Comment 1" attribute="Comment" lineEndContext="#pop">
             <keyword attribute="Alert" context="#stay" String="attention" />
         </context>
 
-        <context name="Commentar 2" attribute="Comment" lineEndContext="#stay">
+        <context name="Comment 2" attribute="Comment" lineEndContext="#stay">
             <Detect2Chars attribute="Comment" context="#pop" char="*" char1="/" endRegion="Comment"/>
             <keyword attribute="Alert" context="#stay" String="attention" />
         </context>
@@ -517,20 +515,21 @@
 
     </contexts>
     <itemDatas>
-        <itemData name="Normal Text"    defStyleNum="dsNormal"/>
-        <itemData name="Keyword1"        defStyleNum="dsKeyword" bold="1"/>
-        <itemData name="Keyword2"        defStyleNum="dsKeyword" />
-        <itemData name="Function"       defStyleNum="dsFunction" bold="0"/>
-        <itemData name="Data Type"      defStyleNum="dsDataType"/>
-        <itemData name="Type Qualifier" defStyleNum="dsDataType"/>
-        <itemData name="Decimal"        defStyleNum="dsDecVal"/>
-        <itemData name="Octal"          defStyleNum="dsBaseN"/>
-        <itemData name="Hex"            defStyleNum="dsBaseN"/>
-        <itemData name="Float"          defStyleNum="dsFloat"/>
-        <itemData name="Symbol"         defStyleNum="dsNormal"/>
-        <itemData name="Preprocessor"   defStyleNum="dsPreprocessor"/>
-        <itemData name="Comment"        defStyleNum="dsComment"/>
-        <itemData name="Alert"          defStyleNum="dsAlert" />
+        <itemData name="Normal Text"       defStyleNum="dsNormal"/>
+        <itemData name="Keyword1"          defStyleNum="dsKeyword" bold="1"/>
+        <itemData name="Keyword2"          defStyleNum="dsKeyword" />
+        <itemData name="General Variables" defStyleNum="dsFunction" />
+        <itemData name="User Variables"    defStyleNum="dsNormal" />
+        <itemData name="Data Type"         defStyleNum="dsDataType"/>
+        <itemData name="Type Qualifier"    defStyleNum="dsDataType"/>
+        <itemData name="Decimal"           defStyleNum="dsDecVal"/>
+        <itemData name="Octal"             defStyleNum="dsBaseN"/>
+        <itemData name="Hex"               defStyleNum="dsBaseN"/>
+        <itemData name="Float"             defStyleNum="dsFloat"/>
+        <itemData name="Symbol"            defStyleNum="dsNormal"/>
+        <itemData name="Preprocessor"      defStyleNum="dsPreprocessor"/>
+        <itemData name="Comment"           defStyleNum="dsComment"/>
+        <itemData name="Alert"             defStyleNum="dsAlert" />
    </itemDatas>
 
 </highlighting>
